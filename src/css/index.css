@@ -1,0 +1,32 @@
+.form {
+  margin-top: 1rem;
+}
+.form__input {
+  display: none;
+}
+.form__label {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+.form__label:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+.form__label:active {
+  background-color: #ececec;
+}
+
+.canvas-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
