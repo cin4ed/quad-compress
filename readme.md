@@ -4,7 +4,13 @@ Web image compressor using quadtree data structure in JS
 
 ## What is a Quadtree?
 
-Quadtree is a tree data structure where every internal node have 4 children.
+Quadtree is a tree data structure where every internal node have 4 children. (1.1)
+
+
+
+<p align="center">
+  <img src="https://i.imgur.com/Coy5JZj.png" />
+</p>
 
 ### How can I use it?
 
