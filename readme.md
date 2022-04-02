@@ -1,6 +1,6 @@
 # QUAD-COMPRESS
 
-Image compressor using quadtree data structure in JS
+Web image compressor using quadtree data structure in JS
 
 ## What is a Quadtree?
 
