@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="src/css/normalize.css">
   <link rel="stylesheet" href="src/css/global.css">
   <link rel="stylesheet" href="src/css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Document</title>
 </head>
 <body>
   <div class="app">
     <header class="header">
       <h1 class="header__title">
-        <a class="header__title-link" href="#">QuadCompress</a>
+        <a class="header__title-link" href="#">QuadCompress <span style="color:red;">BETA</span></a>
       </h1>
       <div class="header__navigation">
         <a class="header__link" href="#">Home</a>
@@ -24,24 +25,40 @@
     </header>
 
     <main class="main">
-      <form class="form" action="">
-        <label class="form__label" for="file-input">Upload Image (JPEG)</label>
-        <input class="form__input" id="file-input" type="file" accept="image/jpeg">
-      </form>
-  
-      <div class="image-preview-container"></div>
-      <div class="canvas-container">
-        <canvas class="canvas" id="canvas"></canvas>
+      <div class="information">
+        <h3 style="color: red; text-align: center;">ALERTA</h3>
+        <ul>
+          <li>
+            No suban imagenes de mucha resolucion por el momento,
+            tengo k optimizar el algoritmo xD max 700x700
+          </li>
+          <li>
+            Entre menos tolerancia mas tiempo y recursos se ocuparan.
+          </li>
+          <li>
+            Algunas imagenes con mucho contraste pueden tardar en aparecer a la derecha!
+          </li>
+        </ul>
       </div>
+
+      <form id="form" class="form" action="">
+        <label class="form__label" for="file-input">Choose Image (JPEG)</label>
+        <div id="form__range-container"></div>
+        <div id="form__range-output"></div>
+      </form>
     </main>
   </div>
-  
-  <script src="src/js/index.js" type="module"></script>
+  <div class="preview">
+    <div class="preview__img-container">
+      <h3>Original:</h3>
+      <div class="preview__img"></div>
+    </div>
+    <div class="preview__canvas-container">
+      <h3>Computed:</h3>
+      <div class="preview__canvas" id="preview__canvas"></div>
+    </div>
+  </div>
+  <script src="src/js/ImageQT.js"></script>
+  <script src="src/js/sketch.js"></script>
 </body>
 </html>
-
-<!-- p5js -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
-<!-- web url image cat -->
-<!-- <img id="cat-image" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17E02/production/_106649779_gettyimages-472160419.jpg"> -->
