@@ -1,3 +1,5 @@
+Live demo here: https://cin4ed.github.io/quad-compress/
+
 # QUAD-COMPRESS
 
 Web image compressor using quadtree data structure in JS
@@ -5,8 +7,6 @@ Web image compressor using quadtree data structure in JS
 ## What is a Quadtree?
 
 Quadtree is a tree data structure where every internal node have 4 children. (1.1)
-
-Live demo here: https://cin4ed.github.io/quad-compress/
 
 <p align="center">
   <img src="https://i.imgur.com/Coy5JZj.png" />
