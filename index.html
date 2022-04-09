@@ -14,7 +14,7 @@
   <div class="app">
     <header class="header">
       <h1 class="header__title">
-        <a class="header__title-link" href="#">QuadCompress <span style="color:red;">BETA</span></a>
+        <a class="header__title-link" href="#">QuadCompress</a>
       </h1>
       <div class="header__navigation">
         <a class="header__link" href="#">Home</a>
@@ -25,33 +25,19 @@
     </header>
 
     <main class="main">
-      <div class="information">
-        <h3 style="color: red; text-align: center;">ALERTA</h3>
-        <ul>
-          <li>
-            No suban imagenes de mucha resolucion por el momento,
-            tengo k optimizar el algoritmo xD max 700x700
-          </li>
-          <li>
-            Entre menos tolerancia mas tiempo y recursos se ocuparan.
-          </li>
-          <li>
-            Algunas imagenes con mucho contraste pueden tardar en aparecer a la derecha!
-          </li>
-        </ul>
-      </div>
-
       <form id="form" class="form" action="">
         <label class="form__label" for="file-input">Choose Image (JPEG)</label>
         <div id="form__range-container"></div>
         <div id="form__range-output"></div>
+        <div id="form__checkbox-container"></div>
       </form>
     </main>
   </div>
   <div class="preview">
     <div class="preview__img-container">
       <h3>Original:</h3>
-      <div class="preview__img"></div>
+      <div class="preview__img">
+      </div>
     </div>
     <div class="preview__canvas-container">
       <h3>Computed:</h3>

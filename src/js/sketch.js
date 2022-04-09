@@ -4,11 +4,7 @@ let toleranceInput;
 let tolerance = 100;
 let computedWidth;
 let computedHeight;
-
-function preload() {
-  const img = loadImage("assets/choosen-one.jpeg");
-  console.log(img);
-}
+let showSquares = false;
 
 function setup() {
   createCanvas(10, 10).parent("preview__canvas");
@@ -20,7 +16,7 @@ function setup() {
   fileInput.id("file-input");
 
   // create tolerance input
-  toleranceInput = createInput(null, "range");
+  toleranceInput = createInput(null, "number");
   toleranceInput.attribute("min", 50);
   toleranceInput.attribute("max", 450);
   toleranceInput.attribute("value", tolerance);
@@ -35,6 +31,11 @@ function setup() {
     }
   });
 
+  // create showSquares input
+  const showSquaresCheckbox = createCheckbox(' Show Boundaries', false);
+  showSquaresCheckbox.parent("form__checkbox-container");
+  showSquaresCheckbox.changed(() => showSquares = !showSquares);
+
   // create tolerance value output
   let toleranceSpan = createSpan("Tolerance: ");
   toleranceSpan.parent("#form__range-output");
@@ -42,12 +43,12 @@ function setup() {
   outputSpan.id("tolerance-output");
   outputSpan.parent("#form__range-output");
 
-  frameRate(5);
+  frameRate(1);
 }
 
 function draw() {
   if (imgQT) {
-    imgQT.show();
+    imgQT.show(showSquares);
   }
 }
 

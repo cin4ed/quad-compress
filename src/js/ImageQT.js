@@ -21,16 +21,22 @@ class ImageQT {
     this.analize();
   }
 
-  show() {
+  show(showSquares) {
     if (this.subdivided) {
-      this.nw.show();
-      this.ne.show();
-      this.sw.show();
-      this.se.show();
+      this.nw.show(showSquares);
+      this.ne.show(showSquares);
+      this.sw.show(showSquares);
+      this.se.show(showSquares);
       return;
     } else {
       fill(this.avgColor.r, this.avgColor.g, this.avgColor.b);
-      stroke(this.avgColor.r, this.avgColor.g, this.avgColor.b);
+
+      if (showSquares) {
+        stroke(0, 0, 0);
+      } else {
+        stroke(this.avgColor.r, this.avgColor.g, this.avgColor.b);
+      }
+
       rect(this.rect.x, this.rect.y, this.rect.w, this.rect.h);
       return;
     }
